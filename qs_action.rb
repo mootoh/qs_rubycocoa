@@ -1,3 +1,13 @@
+#
+# RubyCocoaPlugin
+#
+# License: revised BSD
+# Motohiro Takayama <mootoh@gmail.com>
+#
+
+# 
+# does actual Action
+#
 class Action
   def initialize(logger)
     @logger = logger

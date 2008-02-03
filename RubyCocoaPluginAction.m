@@ -2,8 +2,8 @@
 //  RubyCocoaPluginAction.m
 //  RubyCocoaPlugin
 //
+//  License: revised BSD
 //  Created by mootoh on 2/2/08.
-//  Copyright mootoh 2008. All rights reserved.
 //
 
 #import "RubyCocoaPluginAction.h"
