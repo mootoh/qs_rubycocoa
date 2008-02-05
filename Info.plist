@@ -15,17 +15,17 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>22</string>
+	<string>33</string>
 	<key>NSPrincipalClass</key>
-	<string>RubyCocoaPlugin</string>
+	<string>RCLoader</string>
 	<key>QSActions</key>
 	<dict>
 		<key>RubyCocoaPluginAction</key>
 		<dict>
 			<key>actionClass</key>
-			<string>RubyCocoaPluginAction</string>
+			<string>RubyAction</string>
 			<key>actionSelector</key>
-			<string>performActionOnObject:</string>
+			<string>act:</string>
 			<key>directTypes</key>
 			<array>
 				<string>*</string>

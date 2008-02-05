@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		7F35FF4007F9ACD90056051D /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3C07F9ACD90056051D /* QSCore.framework */; };
 		7F35FF4207F9ACD90056051D /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3E07F9ACD90056051D /* QSFoundation.framework */; };
+		86D281F50D58A6E2003E6DC6 /* RCLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D281F40D58A6E2003E6DC6 /* RCLoader.m */; };
+		86D282000D58AC9A003E6DC6 /* load_ruby.rb in Resources */ = {isa = PBXBuildFile; fileRef = 86D281FF0D58AC9A003E6DC6 /* load_ruby.rb */; };
+		86D282030D58ADDE003E6DC6 /* qs_action.rb in Resources */ = {isa = PBXBuildFile; fileRef = 86D2D12B0D544E9F00B4CFF4 /* qs_action.rb */; };
+		86D282090D58AF39003E6DC6 /* shared.rb in Resources */ = {isa = PBXBuildFile; fileRef = 86D282080D58AF39003E6DC6 /* shared.rb */; };
 		86D2D1130D544DE200B4CFF4 /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D2D1120D544DE200B4CFF4 /* RubyCocoa.framework */; };
-		86D2D12C0D544E9F00B4CFF4 /* qs_action.rb in Resources */ = {isa = PBXBuildFile; fileRef = 86D2D12B0D544E9F00B4CFF4 /* qs_action.rb */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		BBF5817C0B1D9D84003CFF55 /* RubyCocoaPluginAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF5817B0B1D9D84003CFF55 /* RubyCocoaPluginAction.m */; };
 /* End PBXBuildFile section */
@@ -23,6 +26,10 @@
 		7F35FF3F07F9ACD90056051D /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
 		7FFA8E9C0816CCCA00A858CD /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
 		7FFA8E9D0816CCCA00A858CD /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
+		86D281F30D58A6E2003E6DC6 /* RCLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoader.h; sourceTree = "<group>"; };
+		86D281F40D58A6E2003E6DC6 /* RCLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoader.m; sourceTree = "<group>"; };
+		86D281FF0D58AC9A003E6DC6 /* load_ruby.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = load_ruby.rb; sourceTree = "<group>"; };
+		86D282080D58AF39003E6DC6 /* shared.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = shared.rb; sourceTree = "<group>"; };
 		86D2D1120D544DE200B4CFF4 /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		86D2D12B0D544E9F00B4CFF4 /* qs_action.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = qs_action.rb; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +99,8 @@
 		32DBCF9E0370C38000C91783 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				86D281F30D58A6E2003E6DC6 /* RCLoader.h */,
+				86D281F40D58A6E2003E6DC6 /* RCLoader.m */,
 				BBF5817A0B1D9D84003CFF55 /* RubyCocoaPluginAction.h */,
 				BBF5817B0B1D9D84003CFF55 /* RubyCocoaPluginAction.m */,
 			);
@@ -101,6 +110,8 @@
 		32DBCF9F0370C38200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				86D282080D58AF39003E6DC6 /* shared.rb */,
+				86D281FF0D58AC9A003E6DC6 /* load_ruby.rb */,
 				86D2D12B0D544E9F00B4CFF4 /* qs_action.rb */,
 				32DBCF980370C29C00C91783 /* RubyCocoaPlugin_Prefix.pch */,
 			);
@@ -160,7 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86D2D12C0D544E9F00B4CFF4 /* qs_action.rb in Resources */,
+				86D282000D58AC9A003E6DC6 /* load_ruby.rb in Resources */,
+				86D282030D58ADDE003E6DC6 /* qs_action.rb in Resources */,
+				86D282090D58AF39003E6DC6 /* shared.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBF5817C0B1D9D84003CFF55 /* RubyCocoaPluginAction.m in Sources */,
+				86D281F50D58A6E2003E6DC6 /* RCLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

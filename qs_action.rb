@@ -5,30 +5,16 @@
 # Motohiro Takayama <mootoh@gmail.com>
 #
 
+require 'osx/cocoa'
+require 'shared'
+
 # 
 # does actual Action
 #
-class Action
-  def initialize(logger)
-    @logger = logger
-  end
-
-  # write something great :)
-  #  - arg : QSObject
+class RubyAction < OSX::QSActionProvider
   def act(arg)
     val = arg.stringValue
-    @logger.info(val)
-    'Hello world, ' + val
+    Shared.logger.info('RubyAction : ' + val)
+    OSX::QSObject.objectWithString('Hello world, ' + val)
   end
 end # Action
-
-require 'osx/cocoa'
-OSX.init_for_bundle do |bdl, owner, log|
-  # bdl    - the bundle related with the 2nd argument of RBBundleInit
-  # owner  - the 3rd argument of RBBundleInit as optional data
-  # log    - logger for this block
-
-  act = Action.new(log)
-  owner.setInstance act
-end
-
